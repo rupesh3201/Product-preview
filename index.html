@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="product-preview">
+    <div class="product-image">
+        <img id="mainImage" src="product1.jpg" alt="Product Image">
+    </div>
+
+    <div class="product-thumbnails">
+        <img src="product1.jpg" alt="Thumbnail 1" onclick="changeImage('product1.jpg')">
+        <img src="product2.jpg" alt="Thumbnail 2" onclick="changeImage('product2.jpg')">
+        <img src="product3.jpg" alt="Thumbnail 3" onclick="changeImage('product3.jpg')">
+    </div>
+
+    <div class="product-colors">
+        <button class="color-btn" style="background-color: red;" onclick="changeImage('product_red.jpg')"></button>
+        <button class="color-btn" style="background-color: blue;" onclick="changeImage('product_blue.jpg')"></button>
+        <button class="color-btn" style="background-color: green;" onclick="changeImage('product_green.jpg')"></button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
