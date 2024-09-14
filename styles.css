@@ -53,3 +53,8 @@ body {
 .product-colors .color-btn:hover {
     transform: scale(1.2);
 }
+.Image{
+    height: 90px;
+    
+    object-fit: contain;
+}
