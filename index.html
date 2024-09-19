@@ -1,28 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Preview</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="script.js">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Preview Design</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .product-card {
+      background-color: #fff;
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card img:hover {
+      transform: scale(1.05);
+    }
+
+    .product-title {
+      margin: 20px 0 10px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      color: #f57224;
+      margin-bottom: 20px;
+    }
+
+    .add-to-cart {
+      background-color: #f57224;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e96318;
+    }
+
+    .success-message {
+      display: none;
+      color: green;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-<!-- div -->
-<div class="product-preview">
-    <div class="product-image">
-        <img id="mainImage" src="./images/classicCoke.png" alt="Product Image">
-    </div>
 
-    <div class="product-thumbnails">
-        <img src="./images/classicCoke.png" alt="Iphone" class="Image"  onclick="changeImage('./images/classicCoke.png')">
-        <img src="./images/fantaCan.png" alt="Thumbnail 2" class="Image"   onclick="changeImage('./images/fantaCan.png')">
-        <img src="./images/waterBottle.png" alt="Thumbnail 3" class="Image"   onclick="changeImage('./images/waterBottle.png')">
-    </div>
+  <div class="product-card">
+    <img src="./images/laysSalted.png" alt="Product Image">
+    <h2 class="product-title">Coca-Cola</h2>
+    <p class="product-description">Coca-Cola, or Coke, is a cola soft drink manufactured by the Coca-Cola Company.</p>
+    <p class="product-price">$0.60</p>
+    <button class="add-to-cart">Add to Cart</button>
+    <p class="success-message">Added to Cart!</p>
+  </div>
 
-    
-</div>
+  <div class="product-card">
+    <img src="./images/laysSaltAndVinegar.png" alt="Product Image">
+    <h2 class="product-title">Coca-Cola</h2>
+    <p class="product-description">Coca-Cola, or Coke, is a cola soft drink manufactured by the Coca-Cola Company.</p>
+    <p class="product-price">$0.60</p>
+    <button class="add-to-cart">Add to Cart</button>
+    <p class="success-message">Added to Cart!</p>
+  </div>
+  <div class="product-card">
+    <img src="./images/laysCream.png" alt="Product Image">
+    <h2 class="product-title">Coca-Cola</h2>
+    <p class="product-description">Coca-Cola, or Coke, is a cola soft drink manufactured by the Coca-Cola Company.</p>
+    <p class="product-price">$0.60</p>
+    <button class="add-to-cart">Add to Cart</button>
+    <p class="success-message">Added to Cart!</p>
+  </div>
 
-<script src="script.js"></script>
+
+  <script>
+    const addToCartButton = document.querySelector('.add-to-cart');
+    const successMessage = document.querySelector('.success-message');
+
+    addToCartButton.addEventListener('click', () => {
+      successMessage.style.display = 'block';
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 2000); // Hide the success message after 2 seconds
+    });
+  </script>
+
 </body>
 </html>
